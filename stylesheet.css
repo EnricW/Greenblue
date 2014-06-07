@@ -1,15 +1,13 @@
-#scoretitle{
-	font-family: "Tahoma";
-	color: #c7d1d1;
-	font-size: 30px;
-	text-align: center;
+table{ 
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#score{
-    font-family: "Tahoma";
-    color: #c7d1d1;
-    font-size: 30px;
-    text-align: center;
+.scoreboard{
+	font-family: "Verdana";
+	color: #c7d1d1;
+	font-size: 20px;
+	text-align: center;
 }
 
 #cube{
