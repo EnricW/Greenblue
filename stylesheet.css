@@ -57,3 +57,15 @@
 #bluetext{
     margin: 340px 0px 0px 107px;
 }
+
+.point{
+    font-family: "Tahoma";
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    margin: 400px 0px 0px 75px;
+}
+
+.gameover{
+    background-color: #f99
+}

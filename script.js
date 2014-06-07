@@ -28,10 +28,33 @@ function check(choise){
 	//Correct one
 	if(choise==current){
 		score++;
+	//Calls pointScored()
+		pointScored();
 	//Incorrect
 	}else{
 		score = 0;
+	//Calls gameOVer()
+	//	gameOver();
 	}
+}
+
+// +1 Animation
+function pointScored(){
+	if(current=='b'){
+		$("#bluepoint").animate({bottom: '+=300px'}, 800, function() {
+		//resets position
+		$("#bluepoint").removeAttr('style'); 
+    	})
+	}else{
+		$("#greenpoint").animate({bottom: '+=300px'}, 800, function() {
+		//resets position
+		$("#greenpoint").removeAttr('style'); 
+    	})
+	}
+}
+/**
+function gameOver(){
+	$("#cube").effect("explode");
 }
 
 /**
