@@ -17,43 +17,36 @@ table{
     margin: auto;
 }
 
-#green{
-    height: 400px;
+.choise{
+    padding-top: 300px;
+    height: 60px;
     width: 200px;
+    display: inline-block;
+}
+
+#green{
     margin: 0px -2px 0px 0px;
     background-color: #99ffd1;
     background: -webkit-linear-gradient(top, rgba(153, 255, 209, 0) 0%, rgba(153, 255, 209, 1) 40%); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom, rgba(153, 255, 209, 0) 0%, rgba(153, 255, 209, 1) 40%); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom, rgba(153, 255, 209, 0) 0%, rgba(153, 255, 209, 1) 40%); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom, rgba(153, 255, 209, 0) 0%, rgba(153, 255, 209, 1) 40%); /* Standard syntax (must be last) */
-    display: inline-block;
 }
 
 #blue{
-    height: 400px;
-    width: 200px;
     margin: 0px 0px 0px -2px;
     background-color: #99d8ff;
     background: -webkit-linear-gradient(top, rgba(153, 216, 255, 0), rgba(153, 216, 255, 1) 40%); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom, rgba(153, 216, 255, 0), rgba(153, 216, 255, 1) 40%); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom, rgba(153, 216, 255, 0), rgba(153, 216, 255, 1) 40%); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom, rgba(153, 216, 255, 0) 0%, rgba(153, 216, 255, 1) 40%); /* Standard syntax (must be last) */
-    display: inline-block;
 }
 
 .inner{
     font-family: "Tahoma";
     color: #fff;
     font-size: 50px;
-    position: absolute;
-}
-
-#greentext{
-    margin: 340px 0px 0px 0px;
-}
-
-#bluetext{
-    margin: 340px 0px 0px 107px;
+    text-shadow: -1px 1px #6B6B6B;
 }
 
 .point{
@@ -61,9 +54,21 @@ table{
     color: #fff;
     font-size: 50px;
     position: absolute;
-    margin: 400px 0px 0px 75px;
+    margin-left: 70px;
+    display: none;
+    text-shadow: -1px 1px #6B6B6B;
 }
 
-.gameover{
-    background-color: #f99
+/* Game Over */
+body.game-over div.choise,
+body.game-over #cube{
+    background-color: #f99!important;
+}
+
+/* Reset button */
+div.reset{
+    display: none;
+}
+body.game-over div.reset{
+    display: block;
 }

@@ -16,6 +16,10 @@ $(document).ready(function() {
 		//Next color
 		changeColor();
 	})
+	//Reset trigger
+    $("div.reset button").on("click", function() {
+    	newGame();
+    });
 });
 
 /**
@@ -28,33 +32,33 @@ function check(choise){
 	//Correct one
 	if(choise==current){
 		score++;
-	//Calls pointScored()
-		pointScored();
+		//Calls pointScored()
+		pointScored(choise);
 	//Incorrect
 	}else{
 		score = 0;
-	//Calls gameOVer()
-	//	gameOver();
+		//Calls gameOVer()
+		gameOver();
 	}
 }
 
 // +1 Animation
-function pointScored(){
-	if(current=='b'){
-		$("#bluepoint").animate({bottom: '+=300px'}, 800, function() {
+function pointScored(choise){
+	var element = $("div.choise[data-value='"+choise+"'] .point");
+	element.show();
+	element.animate({"margin-top": '-=300px'}, 800, function() {
 		//resets position
-		$("#bluepoint").removeAttr('style'); 
-    	})
-	}else{
-		$("#greenpoint").animate({bottom: '+=300px'}, 800, function() {
-		//resets position
-		$("#greenpoint").removeAttr('style'); 
-    	})
-	}
+		$(this).removeAttr('style');
+		element.hide(); 
+	});
 }
-/**
+
 function gameOver(){
-	$("#cube").effect("explode");
+	$("body").addClass("game-over");
+}
+
+function newGame(){
+	$("body").removeClass("game-over");
 }
 
 /**
