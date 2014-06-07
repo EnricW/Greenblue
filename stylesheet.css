@@ -4,9 +4,9 @@ table{
 }
 
 .scoreboard{
-	font-family: "Verdana";
-	color: #c7d1d1;
-	font-size: 20px;
+	font-family: "Tahoma";
+	color: #6e8787;
+	font-size: 30px;
 	text-align: center;
 }
 
@@ -62,7 +62,7 @@ table{
 /* Game Over */
 body.game-over div.choise,
 body.game-over #cube{
-    background-color: #f99!important;
+    background-color: #F81F1F!important;
 }
 
 /* Reset button */
@@ -71,4 +71,27 @@ div.reset{
 }
 body.game-over div.reset{
     display: block;
+}
+
+.myButton {
+    background-color:#ffffff;
+    -moz-border-radius:42px;
+    -webkit-border-radius:42px;
+    border-radius:42px;
+    border:1px solid #a1a1a1;
+    display:inline-block;
+    cursor:pointer;
+    color:#6e8787;
+    font-family:Verdana;
+    font-size:20px;
+    padding:4px 26px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+    background-color:#fafafa;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
 }

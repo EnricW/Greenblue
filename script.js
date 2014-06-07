@@ -36,7 +36,6 @@ function check(choise){
 		pointScored(choise);
 	//Incorrect
 	}else{
-		score = 0;
 		//Calls gameOVer()
 		gameOver();
 	}
@@ -46,7 +45,7 @@ function check(choise){
 function pointScored(choise){
 	var element = $("div.choise[data-value='"+choise+"'] .point");
 	element.show();
-	element.animate({"margin-top": '-=300px'}, 800, function() {
+	element.animate({"margin-top": '-=300px'}, 600, function() {
 		//resets position
 		$(this).removeAttr('style');
 		element.hide(); 
@@ -59,6 +58,10 @@ function gameOver(){
 
 function newGame(){
 	$("body").removeClass("game-over");
+	//Resets score
+	score = 0;
+	//Prints score
+	$("#score").html(score);
 }
 
 /**
