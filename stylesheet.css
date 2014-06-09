@@ -60,9 +60,8 @@ table{
 }
 
 /* Game Over */
-body.game-over div.choise,
 body.game-over #cube{
-    background-color: #F81F1F!important;
+    background-color: #FF5E5E!important;
 }
 
 /* Reset button */
