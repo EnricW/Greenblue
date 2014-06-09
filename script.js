@@ -1,6 +1,6 @@
 var score = 0;
 var current = "";
-var stoped = false;
+var gameStopped = false;
 
 //Document ready
 $(document).ready(function() {
@@ -30,7 +30,7 @@ $(document).ready(function() {
  * @return void
  */
 function check(choise){
-	if(!stoped){
+	if(!gameStopped){
 		//Correct one
 		if(choise==current){
 			score++;
@@ -57,7 +57,7 @@ function pointScored(choise){
 
 function gameOver(){
 	$("body").addClass("game-over");
-	stoped = true;
+	gameStopped = true;
 }
 
 function newGame(){
@@ -66,7 +66,7 @@ function newGame(){
 	score = 0;
 	//Prints score
 	$("#score").html(score);
-	stoped = false;
+	gameStopped = false;
 }
 
 /**
@@ -77,7 +77,7 @@ function newGame(){
 function changeColor(){
 	//Randomize a color
 	var random = Math.random();
-	console.log(random);
+	//console.log(random);
 	//Blue
 	if(random <= 0.5){
 		//From (hue) 174 to 203
@@ -89,7 +89,7 @@ function changeColor(){
 	    color = hslToRgb(getRandom(169,179)*10);
 	    current = "g";
 	}
-	console.log(color);
+	//console.log(color);
 	//Change color
     $("#cube").css("background-color", "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")");
 }
