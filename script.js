@@ -1,5 +1,6 @@
 var score = 0;
 var current = "";
+var stoped = false;
 
 //Document ready
 $(document).ready(function() {
@@ -29,15 +30,17 @@ $(document).ready(function() {
  * @return void
  */
 function check(choise){
-	//Correct one
-	if(choise==current){
-		score++;
-		//Calls pointScored()
-		pointScored(choise);
-	//Incorrect
-	}else{
-		//Calls gameOVer()
-		gameOver();
+	if(!stoped){
+		//Correct one
+		if(choise==current){
+			score++;
+			//Calls pointScored()
+			pointScored(choise);
+		//Incorrect
+		}else{
+			//Calls gameOVer()
+			gameOver();
+		}
 	}
 }
 
@@ -54,6 +57,7 @@ function pointScored(choise){
 
 function gameOver(){
 	$("body").addClass("game-over");
+	stoped = true;
 }
 
 function newGame(){
@@ -62,6 +66,7 @@ function newGame(){
 	score = 0;
 	//Prints score
 	$("#score").html(score);
+	stoped = false;
 }
 
 /**
